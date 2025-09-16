@@ -4,5 +4,13 @@ export const Boton = ({ texto, color }) => {
     color: "white",
   };
 
-  return <button style={estilos}>{texto}</button>;
+  const saludar = () => {
+    alert("Boton clickeado");
+  };
+
+  return (
+    <button style={estilos} onClick={saludar}>
+      {texto}
+    </button>
+  );
 };
