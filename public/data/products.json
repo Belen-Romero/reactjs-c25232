@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Budín de limón",
+    "price": 4500,
+    "category": "dulce",
+    "description": "Budín húmedo de limón con glaseado casero.",
+    "imageUrl": "/images/budin-limon.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Pan de masa madre",
+    "price": 3200,
+    "category": "salado",
+    "description": "Hogaza de 750 g con fermentación lenta de 24 horas.",
+    "imageUrl": "/images/pan-masa-madre.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Croissant de manteca",
+    "category": "dulce",
+    "price": 1200,
+    "description": "Hojaldre 100% manteca, crujiente por fuera y tierno por dentro.",
+    "imageUrl": "/images/croissant.jpg"
+  }
+]
