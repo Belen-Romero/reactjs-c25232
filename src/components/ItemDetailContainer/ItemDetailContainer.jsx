@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
   const [detail, setDetail] = useState({});
+
+  //Desestructuramos el objeto del useParams
+  //la clave coincide con el nombre que definimos en Route-> :id
+  const { id } = useParams();
 
   useEffect(() => {
     fetch("/data/products.json")
@@ -14,7 +19,7 @@ export const ItemDetailContainer = () => {
         return res.json();
       })
       .then((data) => {
-        const found = data.find((p) => p.id === "3");
+        const found = data.find((p) => p.id === id); //Usamos el param para comparar el id del producto en el json
         if (found) {
           setDetail(found);
         } else {
@@ -24,7 +29,7 @@ export const ItemDetailContainer = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
     <main>

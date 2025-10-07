@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
+
 export const Nav = () => {
+  //Dejamos los Link preparados para cuando hagamos filtrado por categoria
+  //Por ahora, quedan de vista, pero sirven al tocar para escribir la ruta
+  //en la barra de busqueda
   return (
     <nav>
       <ul>
+        <li></li>
         <li>
-          <a href="./#">Home</a>
+          <Link to={"/category/salado"}>Salado</Link>
         </li>
         <li>
-          <a href="./#">DLC</a>
-        </li>
-        <li>
-          <a href="./#">Juegos</a>
+          <Link to={"/category/dulce"}>Dulce</Link>
         </li>
       </ul>
     </nav>
